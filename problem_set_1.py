@@ -7,13 +7,15 @@ given_name = 'Addison'
 # Set variables for `candies`, `people`, `left_over` to make your tests pass.
 candies = 20
 people = 6
-left_over = candies / people 
+left_over = 20 % 6
+
 
 # ------------------------------------------------------------------------------
 # 3. Create a function called `greeting` that returns "Hello, <name>!",
 # where <name> is the name given as an argument to the function.
 def greeting():
     print('Hello <name>!')
+    pass
 
 # ------------------------------------------------------------------------------
 # 4. Create a function called `is_odd` that, given a number, will
@@ -32,6 +34,7 @@ def is_odd(number):
 # return true if the number is even and false if it is not. An even number is a
 # number which, when divided by 2, has a remainder of 0.
 def is_even(number):
+    remainder = number % 2
     if remainder == 0:
         return True
     return False
@@ -43,13 +46,17 @@ def is_even(number):
 # 6. Create a function called `fahrenheit_to_celsius` that takes a
 # Fahrenheit temperature as an argument and returns the
 # temperature in Celsius.
-
+def fahrenheit_to_celsius(temp):
+    return
+    pass
 
 # ------------------------------------------------------------------------------
 # 7. Create a function called `celsius_to_fahrenheit` that takes a
 # Celsius temperature as an argument and returns the
 # temperature in Fahrenheit.
-
+def celsius_to_fahrenheit(temp):
+    return
+    pass
 
 # ------------------------------------------------------------------------------
 # 8. Create a function called `fahrenheit_to_kelvin` that takes a
@@ -58,13 +65,25 @@ def is_even(number):
 # fahrenheit_to_celsius function.
 # Absolute zero (0 K) is equivalent to −273.15 C.
 # 1 degree Kelvin equals 1 degree Celsius.
+def celsius_to_fahrenheit(temp):
+    return
+def fahrenheit_to_kelvin(temp): 
+    return
+    pass
+    #absolute zero = -273.15 celsius 
+    #1 degree Kelvin = 1 degree Celsius
 
 
 # ------------------------------------------------------------------------------
 # 9. Create a function called `lesser` that takes two numbers as
 # arguments and returns the lesser of them. This function should
 # use an if/else statement.
-
+def lesser (num1, num2):
+     if num1 < num2:
+        print(num1)
+     else:
+        print(num2)
+     pass
 
 # ------------------------------------------------------------------------------
 # 10. Create a function called `multigreeting` that takes a name
@@ -78,6 +97,14 @@ def is_even(number):
 # eo - Saluton, <name>!
 #
 # If any other language code is used, return nothing.
+def multigreeting (name, lang):
+    en = 'English'
+    es = 'Spanish'
+    fr = 'French'
+    eo = 'Esperanto'
+    pass
+
+
 
 
 # ------------------------------------------------------------------------------
@@ -107,3 +134,6 @@ def is_even(number):
 
 # Write a function called `gcd` that takes two arguments and returns the greatest
 # common divisor using the instructions above.
+def gcd (argument1, argument2):
+    return
+    pass

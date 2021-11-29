@@ -40,6 +40,7 @@ class VariableTest(unittest.TestCase):
     ],
 )
 def test_greeting(input, expected):
+    print('value of input is:' + input)
     assert greeting(input) == expected
 
 

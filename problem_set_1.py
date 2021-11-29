@@ -7,27 +7,27 @@ given_name = 'Addison'
 # Set variables for `candies`, `people`, `left_over` to make your tests pass.
 candies = 20
 people = 6
-left_over = 20 % 6
+left_over = candies % people
 
 
 # ------------------------------------------------------------------------------
 # 3. Create a function called `greeting` that returns "Hello, <name>!",
 # where <name> is the name given as an argument to the function.
-def greeting():
-    print('Hello <name>!')
-    pass
+def greeting(name):
+    print('value of name is:' + name)
+    return 'Hello,' + ' ' + name + '!'
+greeting('Laurell')    
 
 # ------------------------------------------------------------------------------
 # 4. Create a function called `is_odd` that, given a number, will
 # return true if the number is odd and false if it is not. An odd number is a
 # number which, when divided by 2, has a remainder of 1 or -1.
 def is_odd(number):
-    remainder = number % 2
-    if remainder == -1 or remainder == 1:
-        return True
+    if int(number) == number:
+        if number % 2 == -1 or number % 2 == 1:
+            return True
     return False
-
-
+#4 done in class
 
 # ------------------------------------------------------------------------------
 # 5. Create a function called `is_even` that, given a number, will
@@ -38,8 +38,7 @@ def is_even(number):
     if remainder == 0:
         return True
     return False
-
-
+#5 done in class
 
 
 # ------------------------------------------------------------------------------
@@ -48,7 +47,7 @@ def is_even(number):
 # temperature in Celsius.
 def fahrenheit_to_celsius(temp):
     return
-    pass
+    
 
 # ------------------------------------------------------------------------------
 # 7. Create a function called `celsius_to_fahrenheit` that takes a
@@ -56,7 +55,7 @@ def fahrenheit_to_celsius(temp):
 # temperature in Fahrenheit.
 def celsius_to_fahrenheit(temp):
     return
-    pass
+    
 
 # ------------------------------------------------------------------------------
 # 8. Create a function called `fahrenheit_to_kelvin` that takes a
@@ -69,7 +68,7 @@ def celsius_to_fahrenheit(temp):
     return
 def fahrenheit_to_kelvin(temp): 
     return
-    pass
+    
     #absolute zero = -273.15 celsius 
     #1 degree Kelvin = 1 degree Celsius
 
@@ -78,12 +77,12 @@ def fahrenheit_to_kelvin(temp):
 # 9. Create a function called `lesser` that takes two numbers as
 # arguments and returns the lesser of them. This function should
 # use an if/else statement.
-def lesser (num1, num2):
+def lesser(num1, num2):
      if num1 < num2:
         print(num1)
      else:
         print(num2)
-     pass
+     
 
 # ------------------------------------------------------------------------------
 # 10. Create a function called `multigreeting` that takes a name
@@ -97,12 +96,26 @@ def lesser (num1, num2):
 # eo - Saluton, <name>!
 #
 # If any other language code is used, return nothing.
-def multigreeting (name, lang):
+def multigreeting(name, lang):
     en = 'English'
     es = 'Spanish'
     fr = 'French'
     eo = 'Esperanto'
-    pass
+    print('What is your name?')
+    myName = input()
+    print('What is your language?')
+    myLang = input()
+    if lang == en:
+        print('Hello, <name>!')
+    elif lang == es:
+        print('Hola, <name>!')
+    elif lang == fr:
+        print('Bonjour, <name>!')
+    elif lang == es:
+        print('Saluton, <name>!')
+    else:
+        return None 
+
 
 
 
@@ -134,6 +147,24 @@ def multigreeting (name, lang):
 
 # Write a function called `gcd` that takes two arguments and returns the greatest
 # common divisor using the instructions above.
-def gcd (argument1, argument2):
-    return
-    pass
+def gcd(a1, a2):
+    counter = 0
+    while is_even(a1) and is_even(a2):
+        a1 = a1 / 2
+        a2 = a2 / 2
+        counter += 1
+    while a1 != a2:
+        if is_even(a1):
+            a1 = a1 / 2
+        elif is_even(a2):
+            a2 = a2 / 2
+        elif a1 > a2:
+            a1 = (a1 - a2) / 2
+        else:
+            a2 = (a2 -a1) / 2
+    g = a1
+    return g * 2**counter
+
+# worked on this during office hours with Ariel and Rebecca
+
+        
